@@ -1,26 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Función para eliminar un nodo por valor
+// Función para eliminar un nodo a partir de su valor.
 void deleteNode(struct Node** head, int value) {
+
+//En este condicional, si la lista està vacìa, entonces no continua corriendo la funcion.
 if (*head == NULL) {
-return; // Si la lista está vacía, no se hace nada.
+return;
 }
+
 if ((*head)->data == value) {
 struct Node* temp = *head;
 *head = (*head)->next;
-free(temp); // Elimina el primer nodo si contiene el valor buscado.
+free(temp); // Aquì se elimina el primer nodo si este contiene el valor buscado.
 return;
 }
+
 struct Node* current = *head;
+
 while (current->next != NULL && current->next->data != value) {
 current = current->next;
 }
+
+//En este condicional, si la lista està vacìa, entonces no continua corriendo la funcion.
 if (current->next == NULL) {
-return; // Si no se encuentra el valor, no se hace nada.
+return;
 }
+
 struct Node* temp = current->next;
 current->next = current->next->next;
-free(temp); // Elimina un nodo que contiene el valor buscado.
+free(temp); // Aquì se elimina el nodo que contiene el valor buscado.
 }
 

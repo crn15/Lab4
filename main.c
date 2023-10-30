@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "declarations.h"
 
 int main() {
 struct Node* head = NULL;
@@ -13,7 +14,7 @@ for (int i=0; i<num; i++) {
 	printf("INGRESE EL VALOR DEL ELEMENTO: ");
 	scanf("%d", &element);
 
-	head= appendNode(&head, element);}
+	appendNode(&head, element);}
 
 printf("Lista inicial:\n");
 printList(head);

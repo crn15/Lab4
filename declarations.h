@@ -8,22 +8,22 @@ struct Node* next;
 };
 
 // Función para agregar un nodo al final de la lista
-void appendNode(struct Node** head, int value)
+void appendNode(struct Node** head, int value);
 
 // Función para eliminar un nodo por valor
-void deleteNode(struct Node** head, int value)
+void deleteNode(struct Node** head, int value);
 
 // Función para agregar un nodo al inicio de la lista
-void prependNode(struct Node** head, int value)
+void prependNode(struct Node** head, int value);
 
 // Función para buscar un nodo por valor e imprimir si existe o no
-void searchNode(struct Node* head, int value)
+void searchNode(struct Node* head, int value);
 
 // Función para imprimir la lista
-void printList(struct Node* head)
+void printList(struct Node* head);
 
 // Función para obtener el elemento enésimo e imprimir su contenido
-void getNodeAtIndex(struct Node* head, int index)
+void getNodeAtIndex(struct Node* head, int index);
 
 // Función para liberar la memoria de la lista
-void freeList(struct Node* head)
+void freeList(struct Node* head);

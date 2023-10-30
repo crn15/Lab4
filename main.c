@@ -2,6 +2,26 @@
 #include <stdlib.h>
 #include "declarations.h"
 
+// Función que imprime la lista.
+void printList(struct Node* head) {
+struct Node* current = head;
+while (current != NULL) {
+printf("%d -> ", current->data);
+current = current->next;
+}
+printf("NULL\n");
+}
+
+// Función que libera la memoria de la lista.
+void freeList(struct Node* head) {
+while (head != NULL) {
+struct Node* temp = head;
+head = head->next;
+free(temp); // Libera la memoria de cada nodo de la lista.
+}
+}
+
+
 int main() {
 struct Node* head = NULL;
 

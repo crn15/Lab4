@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef DECLARATIONS_H
+#define DECLARATIONS_H
 
 // Estructura para representar un nodo en la lista enlazada
 struct Node {
@@ -27,3 +27,5 @@ void getNode(struct Node* head, int index);
 
 // Función para liberar la memoria de la lista.
 void freeList(struct Node* head);
+
+#endif

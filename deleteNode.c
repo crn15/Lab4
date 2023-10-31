@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "declarations.h"
 
 // Función para eliminar un nodo a partir de su valor.
 void deleteNode(struct Node** head, int value) {

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "declarations.h"
 
 // Función para buscar un nodo a partir de un indice.
 void getNode(struct Node* head, int index) {
@@ -10,13 +11,13 @@ struct Node* current = head;
 //Este bucle busca el nodo en la lista.
 while (current != NULL) {
 if (count == index) {
-printf("Elemento en el índice %d: %d\n", index, current->data);
+printf("\nElemento en el índice %d: %d\n", index, current->data);
 return;
 }
 count++;
 current = current->next;
 }
 
-printf("No existe un elemento en el índice %d.\n", index);
+printf("\nNo existe un elemento en el índice %d.\n", index);
 }
 

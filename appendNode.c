@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "declarations.h"
 
 // Función para agregar un nodo al final de la lista.
 void appendNode(struct Node** head, int value) {
